@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block pagetitle %}
+Contact Us
+{% endblock pagetitle %}
+
+{% block body %}
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+            <h1 class="display-4 mb-4" style="color: #4CAF50;">📞 Contact 📞</h1>
+            <p class="lead mb-4" style="color: #333;">We are here to assist you.</p>
+        </div>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card contact-info shadow-lg">
+                <div class="card-body">
+                    <h3 class="card-title mb-4" style="color: #4CAF50;">VIJAYVITHAL</h3>
+                    <p class="card-text lead mb-4" style="color: #333;">Vijay Kulkarni, Software Engineer</p>
+                    <div class="social-media">
+                        <h5 style="color: #4CAF50;">Social Media Handles :</h5>
+                        <a target="_blank" href="mailto:vijayvithal410@gmail.com"><img src="https://image.flaticon.com/icons/png/512/281/281769.png" height="40" width="40" alt="Email Icon"></a> :
+                            vijayvithal410@gmail.com<br><br>
+                        <a target="_blank" href="https://www.linkedin.com/in/vijay-kulkarni-b32969178/"><img src="https://image.flaticon.com/icons/png/512/174/174857.png" height="40" width="40" alt="LinkedIn Icon"></a> :
+                        vijay-kulkarni-b32969178<br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}
+
+<style>
+.contact-info {
+    border: 2px solid #4CAF50;
+    border-radius: 15px;
+    background-color: #f8f9fa;
+}
+
+.social-media img {
+    margin-right: 10px;
+}
+
+.social-media h5 {
+    margin-bottom: 10px;
+}
+</style>

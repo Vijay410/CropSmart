@@ -1,0 +1,121 @@
+{% extends 'base.html' %}
+
+{% block pagetitle %}
+CropSmart
+{% endblock pagetitle %}
+
+{% block body %}
+<div class="container mt-5">
+  <div class="card mb-4">
+    <div class="card-header bg-success text-center">
+      <h5 class="text-white">CropSmart</h5>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-6">
+          <p class="card-text">CropSmart, our prototype app, specializes in detecting diseases affecting plant images. Through cutting-edge image recognition technology, CropSmart swiftly identifies signs of diseases with remarkable accuracy. By harnessing the power of machine learning algorithms, our app continuously refines its detection capabilities, ensuring precise diagnosis of plant ailments. Upon detection, CropSmart goes beyond mere identification, providing tailored recommendations for effective disease management. With CropSmart, farmers can confidently address plant health issues, ensuring optimal yields and safeguarding crop productivity.</p>
+        </div>
+        <div class="col-md-6 text-center">
+          <img src="https://watchandlearn.scholastic.com/content/dam/classroom-magazines/watchandlearn/videos/animals-and-plants/plants/what-are-plants-/What-Are-Plants.jpg" class="img-fluid" alt="Image of a plant">
+          <p class="lead mt-3" style="font-weight: 500;">Plant</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-4">
+    <div class="card-header bg-info text-center">
+      <h5 class="text-white">Feature Overview</h5>
+    </div>
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="feature-box">
+            <h3>Disease Classification</h3>
+            <p>Our app uses advanced machine learning algorithms to accurately classify diseases in crops, helping farmers identify and diagnose plant health issues early on.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-box">
+            <h3>Solution Recommendation</h3>
+            <p>Based on the disease classification results, CropSmart provides personalized recommendations for treatment and management strategies to mitigate crop diseases effectively.</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="feature-box">
+            <h3>Consulting</h3>
+            <p>Contact us for more info</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="card mb-4">
+  <div class="card-header bg-info text-center">
+    <h5 class="text-white">Prediction</h5>
+  </div>
+  <div class="card-body text-center">
+    <h2 class="mt-3 mb-4">Get Predictions</h2>
+    <p>Click here to classify:</p>
+    <a href="/index">
+      <button id="classifyBtn" class="btn btn-success btn-lg"><b>Classify</b></button>
+
+    </a>
+    <div id="loadingIndicator" class="d-none">
+      <div class="spinner-border text-info" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+      <p class="mt-3">Classifying...</p>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* CSS for the loading indicator */
+  #loadingIndicator {
+    display: none;
+  }
+
+  #loadingIndicator.show {
+    display: block;
+  }
+
+  /* Center the spinner */
+  .spinner-border {
+    margin: 0 auto;
+  }
+</style>
+
+<script>
+  // JavaScript to toggle loading indicator when button is clicked
+  document.getElementById("classifyBtn").addEventListener("click", function() {
+    // Show loading indicator
+    document.getElementById("loadingIndicator").classList.add("show");
+
+    // Simulate classification process (replace with your actual code)
+    setTimeout(function() {
+      // Hide loading indicator after 3 seconds (replace with your actual code)
+      document.getElementById("loadingIndicator").classList.remove("show");
+    }, 3000); // Simulating 3 seconds of classification time
+  });
+</script>
+
+
+  <div class="card mb-4">
+    <div class="card-header bg-info text-center">
+      <h5 class="text-white">Feature Work</h5>
+    </div>
+    <div class="card-body">
+      <p>Our ongoing efforts to improve CropSmart include the following feature plans:</p>
+      <ol>
+        <li><strong>Continuous Improvement in Model Performance:</strong> Improving the model performance..</li>
+        <li><strong>Supplements Recommendation:</strong> Medicine recommendation based on disease type.</li>
+        <li><strong>User Interface Enhancement:</strong> UI is not up to the mark need to improve a lot, so exploring more on the UI side.</li>
+        <li><strong>Crop Recommendation:</strong> Planning to add the crop recommendations based on weather conditions.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+{% endblock body %}

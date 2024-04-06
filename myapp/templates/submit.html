@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block pagetitle %}
+{{ title }}
+{% endblock pagetitle %}
+
+{% block body %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="card shadow">
+        <img src="{{ image_url }}" class="card-img-top" alt="Plant Image" style="height: 350px; object-fit: cover;">
+        <div class="card-body">
+          <h1 class="card-title text-center mb-4">{{ title }} 🍂</h1>
+          <div class="row">
+            <div class="col">
+              <div class="card text-white bg-success mb-3">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    {% if pred in [3, 5, 7, 11, 15, 18, 20, 23, 24, 25, 28, 38] %}
+                      Tips to Grow Healthy Plants:
+                    {% else %}
+                      Brief Description:
+                    {% endif %}
+                  </h5>
+                  <p class="card-text">{{ desc }}</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card text-white bg-primary mb-3">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    {% if pred in [3, 5, 7, 11, 15, 18, 20, 23, 24, 25, 28, 38] %}
+                      Benefits:
+                    {% else %}
+                      Prevent This Plant Disease By Following Below Steps:
+                    {% endif %}
+                  </h5>
+                  <p class="card-text">{{ prevent }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock body %}
