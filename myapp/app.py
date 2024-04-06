@@ -96,7 +96,7 @@ def submit():
         prevent = disease_info['Possible Steps'][pred]
         image_url = disease_info['image_url'][pred]
 
-        return render_template('submit.html', title=title, desc=description, prevent=prevent,
+        return render_template('predict.html', title=title, desc=description, prevent=prevent,
                                image_url=image_url, pred=pred)
     except Exception as e:
         logging.error(f"Submission error: {e}")
