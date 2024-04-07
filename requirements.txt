@@ -6,3 +6,4 @@ torchvision
 image
 MarkupSafe
 pytest
+gunicorn

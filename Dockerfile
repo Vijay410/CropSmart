@@ -2,10 +2,10 @@
 FROM python:3.10.12
 
 # Set the working directory in the container
-WORKDIR /myapp
+WORKDIR /app
 
 # Copy the current directory contents into the container at /app
-COPY . .
+COPY . /app
 
 
 # Install any needed dependencies specified in requirements.txt
@@ -15,4 +15,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 5000
 
 # Run app.py when the container launches
-CMD ["python","app.py"]
+CMD gunicorn --workers=4 --bind 0.0.0.0:$PORT app:app
