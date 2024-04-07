@@ -1,0 +1,7 @@
+torch
+flask
+numpy
+pandas
+torchvision
+image
+MarkupSafe

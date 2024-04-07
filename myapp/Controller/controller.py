@@ -1,6 +1,7 @@
 from PIL import Image
 import torchvision.transforms.functional as TF
 import numpy as np
+import logging
 import torch
 
 from Model.predict_disease import PlantDiseaseModel
