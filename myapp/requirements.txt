@@ -5,3 +5,4 @@ pandas
 torchvision
 image
 MarkupSafe
+pytest
